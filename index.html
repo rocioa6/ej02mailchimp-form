@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mailchimp Form</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <aside class="logo">
+      <img
+        class="aside__logo"
+        src="./rsc/mailchimp-logo.svg"
+        alt="mailchimp-logo"
+      />
+    </aside>
+    <main>
+      <h1>Welcome to Mailchimp</h1>
+      <p class="main__text">
+        Find your people. Engage your costumers. Build your brand. Do it all
+        with Mailchimp's Marketing Platform. Already have an accout?
+        <a href="index.html">Log in</a>
+      </p>
+
+      <form action="submit">
+        <div class="form__section">
+          <label class="form__label" for="email">Email</label>
+          <input
+            class="form__input"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="form__section">
+          <label class="form__label" for="username">Username</label>
+          <input
+            class="form__input"
+            type="text"
+            id="username"
+            name="username"
+            required
+          />
+        </div>
+        <div class="form__section">
+          <label class="form__label form__label--pass" for="password"
+            >Password</label
+          >
+          <input
+            class="form__input"
+            type="password"
+            id="password"
+            name="password"
+            minlength="8"
+            required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+            title="Please include at least 1 uppercase character, 1 lowercase character,1 special character and 1 number."
+          />
+        </div>
+        <ul class="form__ul">
+          <li class="form__ul__li">One lowercase character</li>
+          <li class="form__ul__li">One uppercase character</li>
+          <li class="form__ul__li">One number</li>
+          <li class="form__ul__li">One special character</li>
+          <li class="form__ul__li">8 characters minimum</li>
+        </ul>
+        <div class="form__lower-section">
+          <button class="form__button" type="submit">Sign Up</button>
+          <div class="form__section">
+            <input
+              class="form__input-checkbox"
+              type="checkbox"
+              name="checkbox"
+              id="checkbox"
+            />
+            <label class="form__label-checkbox" for="checkbox"
+              >I don't want to receive emails about new Mailchimp products, best
+              practises, or special offers.</label
+            >
+          </div>
+        </div>
+        <p class="form__p">
+          By clicking the Sign Up button, you are creating a Mailchimp account,
+          and you agree to Mailchimp's
+          <a href="index.html">Terms of Use</a> and
+          <a href="index.html">Privacy Policy</a>
+        </p>
+      </form>
+    </main>
+  </body>
+</html>
